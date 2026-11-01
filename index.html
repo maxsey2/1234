@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Many Days Until Christmas? | Live Countdown Clock</title><meta name="description" content="Wondering how many days until Christmas? Find out now with our real-time Christmas countdown clock, complete with festive music and snowfall effects!"><meta name="keywords" content="how many days until Christmas, Christmas countdown, holiday timer, xmas clock, Christmas music timer">
+<link rel="canonical" href="https://countdowntoxmas.com/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Countdown to Christmas"><meta property="og:locale" content="en_US">
+<meta property="og:title" content="How Many Days Until Christmas? | Live Countdown Clock"><meta property="og:description" content="Wondering how many days until Christmas? Find out now with our real-time Christmas countdown clock, complete with festive music and snowfall effects!"><meta property="og:url" content="https://countdowntoxmas.com/"><meta property="og:image" content="https://countdowntoxmas.com/images/og-home.jpg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="How Many Days Until Christmas? | Live Countdown Clock"><meta name="twitter:description" content="Wondering how many days until Christmas? Find out now with our real-time Christmas countdown clock, complete with festive music and snowfall effects!"><meta name="twitter:image" content="https://countdowntoxmas.com/images/og-home.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Mountains+of+Christmas:wght@700&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2"></head><body>
+<canvas id="snow" aria-hidden="true"></canvas>
+<header><a class="logo" href="index.html">🎄 Countdown to Christmas</a>
+<nav aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="index.html#games">Games</a><a href="about.html">About</a><a href="story.html">Christmas story</a><a href="privacy.html">Privacy</a><button class="btn" id="music" aria-pressed="false">🔔 Music off</button></nav></header>
+<main>
+<section class="hero"><h1>How many days until Christmas? 🎄</h1>
+<div class="days"><span id="d">0</span><small id="lbl">days until Christmas</small></div>
+<div class="clock"><div><b id="h">00</b><span>hours</span></div><div><b id="m">00</b><span>minutes</span></div><div><b id="s">00</b><span>seconds</span></div></div>
+<div class="season"><div class="track"><div id="bar"></div></div><p id="pct"></p></div>
+<div class="row"><button class="btn solid" id="fly">🛷 Call Santa</button><button class="btn" id="share">Share the countdown</button></div>
+<div class="garland" id="garland" aria-hidden="true"></div>
+<div class="baubles">
+<button class="bauble" style="--len:26px;--b1:#ff6b6f;--b2:#8f1a21" aria-label="Ring a bauble"></button>
+<button class="bauble" style="--len:56px;--b1:#ffe29a;--b2:#b9821a" aria-label="Ring a bauble"></button>
+<button class="bauble" style="--len:34px;--b1:#4be08f;--b2:#0d5a3a" aria-label="Ring a bauble"></button>
+<button class="bauble" style="--len:64px;--b1:#fff4e3;--b2:#a9b7ae" aria-label="Ring a bauble"></button>
+<button class="bauble" style="--len:30px;--b1:#ff6b6f;--b2:#8f1a21" aria-label="Ring a bauble"></button>
+<button class="bauble" style="--len:52px;--b1:#4be08f;--b2:#0d5a3a" aria-label="Ring a bauble"></button></div>
+<p class="cap" id="cap"></p></section>
+<section><h2>Advent calendar</h2><p class="lead">One door opens each day from December 1. Come back daily and discover a Christmas fact.</p>
+<div class="advent" id="advent"></div><div class="reveal" id="reveal" role="status">Tap a door to open it.</div></section>
+<section id="games"><h2>Christmas games</h2><p class="lead">Two quick games to play while you wait. Your best score stays on your device.</p>
+<div class="games">
+<div class="card"><h3>Catch the gifts</h3><p class="lead">Move your mouse or finger (or use the left and right arrow keys) to catch 🎁 gifts and ⭐ stars worth 3 points. Dodge the lumps of coal. Missing a gift costs a life too.</p>
+<div class="arena"><canvas id="gift" tabindex="0" aria-label="Catch the gifts game"></canvas><div class="ov" id="gov"><p id="got">Ready? You have 5 lives.</p><button class="btn solid" id="gbtn">Start playing</button></div></div><p class="hud" id="ghud" aria-live="off"></p></div>
+<div class="card"><h3>Christmas quiz</h3><p class="lead">10 questions, with a surprising fact after each answer.</p><div id="quiz" aria-live="polite"></div></div>
+</div></section>
+<section><h2>Make the tree sparkle</h2><div class="stage">
+<svg class="tree" viewBox="0 0 200 260" role="img" aria-label="Christmas tree with lights you can click"><polygon fill="#157a4f" points="100,30 148,105 52,105"/><polygon fill="#11663f" points="100,70 160,155 40,155"/><polygon fill="#0d5333" points="100,115 175,215 25,215"/><rect x="88" y="215" width="24" height="30" fill="#5a3a22"/><text id="star" class="star" x="100" y="38" font-size="40" text-anchor="middle" style="cursor:pointer">★</text><g id="lights"></g></svg>
+<p class="lead">Click the lights to change their colour, tap the star, ring the baubles above, or click anywhere on the page to throw sparkles.</p></div></section>
+<section><h2>Secret Santa draw</h2><p class="lead">Type one name per line (3 or more). Everyone gets a different person, and nobody draws themselves. Click a name to reveal who they draw, then hide it again before passing the screen.</p>
+<textarea id="names" aria-label="Names, one per line" placeholder="Anna&#10;Ben&#10;Chloé&#10;David"></textarea>
+<div class="row" style="justify-content:flex-start"><button class="btn solid" id="draw">Draw names</button></div><div class="pairs" id="pairs"></div></section>
+<section><h2>Discover the magic of the Christmas countdown</h2><p class="lead">Every second brings us closer to Christmas — a time of joy, tradition, and togetherness. Come back every day and feel the excitement build. Share the countdown with your friends!</p>
+<div class="facts"><p>Santa’s sleigh would need to travel faster than the speed of light to visit all homes on Christmas Eve!</p><p>Rudolph the Red-Nosed Reindeer was created in 1939 as a marketing gimmick for Montgomery Ward.</p><p>“Silent Night” is the most recorded Christmas song in history.</p><p>The first artificial Christmas trees were made in Germany using dyed goose feathers.</p></div></section></main>
+<div class="forest" aria-hidden="true"></div><div id="santa" aria-hidden="true">🦌🦌🛷</div>
+<footer>© 2025 Countdown to Christmas. All rights reserved.</footer><script src="script.js?v=2"></script></body></html>
